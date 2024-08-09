@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "ad191dd5-d63b-44c4-96ff-48efc90f1884",
+		"name": "Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27057623"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST_LOCAL_KAFKA}}/posts",
+							"host": [
+								"{{HOST_LOCAL_KAFKA}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
