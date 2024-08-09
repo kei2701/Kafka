@@ -1,5 +1,6 @@
 package com.kafka.KafkaProducer.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.kafka.KafkaProducer.dto.response.GeneralResponse;
 import com.kafka.KafkaProducer.service.IKafkaProducerServices;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class PostController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> fetchAndSendPost() {
+    public ResponseEntity<Object> fetchAndSendPost() throws JsonProcessingException {
         kafkaProducerServices.fetchAndSendPostData();
         return ResponseEntity.ok(
                 GeneralResponse.builder()
